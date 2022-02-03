@@ -1,0 +1,24 @@
+<div class="container">
+<%= form_with model: book do |form| %>
+    <p>
+        <%= form.label(:title,"Título") %>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.label(:author, "Autor") %>
+        <%= form.text_field :author %>
+    </p>
+     <p>
+        <%= form.label(:number_pages, "Número de páginas") %>
+        <%= form.text_field :number_pages %>
+    </p>
+    <p>
+        <%= form.label(:year_publication, "Ano de publicação") %>
+        <%= form.text_field :year_publication %>
+    </p>
+   <p> <%= form.hidden_field :user_id, value: current_user.id %></p>
+    <p>
+        <%= form.submit("Salvar") %>
+    </p>
+    </div>
+<% end %>

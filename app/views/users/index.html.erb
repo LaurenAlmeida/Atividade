@@ -1,8 +1,11 @@
-<h1>Hello, Rails!</h1>
+<div class="container">
+<h4>Lista de usuários</h4>
 <ul>
   <% @users.each do |user| %>
     <li>
       <%= user.name %>
+      <td><%= link_to "Show", user %></td>
     </li>
   <% end %>
 </ul>
+</divs>

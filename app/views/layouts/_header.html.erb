@@ -1,0 +1,21 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul>
+        <% if logged_in? %>
+          <li><%= link_to "Books", books_path %></li>
+          <li>
+            <ul>
+              <li><%= link_to "Perfil", current_user %></li>
+              <li>
+                <%= link_to "Log out", sign_out_path, method: "delete" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", sign_in_path, method: "post" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

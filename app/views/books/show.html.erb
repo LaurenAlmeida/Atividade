@@ -1,0 +1,11 @@
+  <div class="container"><p>
+    <strong>Título: </strong>
+    <%= @book.title %>
+</p>
+<p>
+    <strong>Autor: </strong>
+    <%= @book.author %>
+</p>
+ <li><%= link_to "Edit", edit_book_path(@book) %></li>
+<li><%= link_to "Destroy", book_path(@book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+</div>
